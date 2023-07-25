@@ -21,5 +21,4 @@ function LoginAuth(values){
 
     return errorMsg;
 }
-
 export default LoginAuth
