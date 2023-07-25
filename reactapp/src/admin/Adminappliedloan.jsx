@@ -52,7 +52,7 @@ function Adminappliedloan() {
         <div className="loan-cards">
           {loan.map(item => (
             <div className="loan-card" key={item.loanId}>
-              <div className="column">
+              <div className="column1">
                 <p>Applicant name: {item.applicantName}</p>
                 <p>Applicant Address: {item.applicantAddress}</p>
                 <p>Applicant Email: {item.applicantEmail}</p>
