@@ -71,7 +71,7 @@ const Adminapprovedloan = () => {
   return (
     <div className="approved-loan-container">
       <div className="search-bar1">
-        <input1
+        <input id="Search"
           type="text"
           placeholder="Enter loan Id to search"
           value={searchQuery}
