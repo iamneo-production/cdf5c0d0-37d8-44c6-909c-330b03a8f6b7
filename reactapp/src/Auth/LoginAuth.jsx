@@ -10,14 +10,6 @@ function LoginAuth(values){
         errorMsg.email=""
     }
 
-    if(values.password === ""){
-        errorMsg.password = "Password should not be empty"
-    }
-    else if(!password_pattern.test(values.password)) {
-        errorMsg.password = "Password should be 2 letters long."
-    } else {
-        errorMsg.password=""
-    }
 
     return errorMsg;
 }
