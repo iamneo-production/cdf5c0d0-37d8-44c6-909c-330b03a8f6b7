@@ -80,10 +80,10 @@ const Adminapprovedloan = () => {
         <button className="search-button" onClick={handleSearch}>Search</button>
       </div>
       <div className="search-results">
-        {loanIdNotFound && <p className="found">Loan ID not found</p>}
+        {loanIdNotFound && <p className="found1">Loan ID not found</p>}
         {loanDetails && (
-          <div className="loan-details" key={loanDetails.loanId}>
-            <div className="column">
+          <div className="loan-details1" key={loanDetails.loanId}>
+            <div className="column2">
               <p>Applicant name: {loanDetails.applicantName}</p>
               <p>Applicant Address: {loanDetails.applicantAddress}</p>
               <p>Applicant Email: {loanDetails.applicantEmail}</p>
