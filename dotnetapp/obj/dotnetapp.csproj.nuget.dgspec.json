@@ -38,22 +38,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Dapper": {
-              "target": "Package",
-              "version": "[2.0.143, )"
-            },
-            "Microsoft.AspNetCore.Diagnostics": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.AspNetCore.Http": {
-              "target": "Package",
-              "version": "[2.2.2, )"
-            },
-            "Microsoft.AspNetCore.Mvc": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.0, )"
@@ -72,10 +56,6 @@
               "target": "Package",
               "version": "[6.0.0, )"
             },
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
             "Moq": {
               "target": "Package",
               "version": "[4.18.4, )"
@@ -84,21 +64,9 @@
               "target": "Package",
               "version": "[3.13.0, )"
             },
-            "Npgsql": {
-              "target": "Package",
-              "version": "[7.0.4, )"
-            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
-            },
-            "System.Data.SqlClient": {
-              "target": "Package",
-              "version": "[4.8.5, )"
-            },
-            "System.IO": {
-              "target": "Package",
-              "version": "[4.3.0, )"
             }
           },
           "imports": [
