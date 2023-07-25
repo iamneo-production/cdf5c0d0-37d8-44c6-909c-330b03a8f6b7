@@ -11,9 +11,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using dotnetapp.Interface;
-using dotnetapp.Interfaces;
-using dotnetapp.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer;
 
@@ -21,7 +18,6 @@ namespace dotnetapp
 {
     public class Startup
     {
-        private string connectionString;
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -36,22 +32,8 @@ namespace dotnetapp
            // services.AddDbContext<ProductDBContext>(opt => opt.UseSqlServer(connectionString));
            // services.AddScoped<IProductService, ProductService>();
             services.AddCors();
-            services.AddRouting();
-            services.AddEndpointsApiExplorer();
+
             services.AddControllers();
-             connectionString = Configuration.GetConnectionString("myconnstring");
-             services.AddSingleton(connectionString);
-             services.AddTransient<Iloandetails, Loanservice>();
-             services.AddTransient<IUser, Userservicecs>();
-              services.AddCors(options =>
-            {
-                options.AddPolicy("CoreCorsPolicy", builder =>
-                {
-                    builder.AllowAnyOrigin()
-                        .AllowAnyMethod()
-                        .AllowAnyHeader();
-                });
-            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "dotnetapp", Version = "v1" });
@@ -73,7 +55,7 @@ namespace dotnetapp
             app.UseRouting();
 
             app.UseAuthorization();
-            app.UseCors("CoreCorsPolicy");
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
