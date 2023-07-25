@@ -1,28 +1,25 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Signup from "./Signup/Signup";
-import Login from './Login/Login';
-import Dashboard from './Dashboard';
-import AdminDashboard from './AdminDashboard';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './Signup/Signup.css';
-import './Login/Login.css';
+import logo from './logo.svg';
 import './App.css';
 
-const App = () => {
+function App() {
   return (
-    <Router>
-      
-      <Routes>
-       
-        <Route path="/" element={<Signup />} />
-
-        <Route path="/login" element={<Login />} />
-        <Route path="/admin*" element={<AdminDashboard />} />
-        <Route path="/*" element={<Dashboard />} />
-      </Routes>
-    </Router>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
   );
-};
+}
 
 export default App;
