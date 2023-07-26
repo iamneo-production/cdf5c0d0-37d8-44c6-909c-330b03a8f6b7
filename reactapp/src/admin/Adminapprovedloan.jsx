@@ -9,7 +9,6 @@ const Adminapprovedloan = () => {
   const [approvedLoans, setApprovedLoans] = useState([]);
   const [repaymentSchedule, setRepaymentSchedule] = useState([]);
   const [repaymentEnabled, setRepaymentEnabled] = useState(false);
-
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };

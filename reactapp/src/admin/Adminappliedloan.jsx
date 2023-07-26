@@ -40,7 +40,6 @@ function Adminappliedloan() {
         console.log(error);
       });
   };
-
   const isLoanApproved = loanId => {
     return approvedLoans.includes(loanId);
   };
