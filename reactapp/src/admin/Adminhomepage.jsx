@@ -17,7 +17,6 @@ function Adminhomepage() {
         // Handle the error
       });
   }, []);
-
   return (
     <div className="applied-loan-container">
       {loans.map(loan => (

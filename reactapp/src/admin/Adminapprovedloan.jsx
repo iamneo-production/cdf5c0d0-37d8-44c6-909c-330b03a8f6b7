@@ -13,7 +13,6 @@ const Adminapprovedloan = () => {
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
-
   const handleSearch = () => {
     fetch(`https://8080-babebfdaaddaacebcaffeabdcdceeeeaf.project.examly.io/admin/getAllLoan?loanid=${searchQuery}`)
       .then(response => {

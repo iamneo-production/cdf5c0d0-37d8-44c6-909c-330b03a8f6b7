@@ -25,7 +25,6 @@ function Adminappliedloan() {
       .then(response => {
         console.log(response.data);
         setApprovedLoans(prevApprovedLoans => [...prevApprovedLoans, loanId]);
-
         axios
           .get(`https://8080-babebfdaaddaacebcaffeabdcdceeeeaf.project.examly.io/admin/generateSchedules?loanid=${loanId}`)
           .then(res => {
