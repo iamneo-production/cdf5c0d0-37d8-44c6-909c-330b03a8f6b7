@@ -1,4 +1,4 @@
-using dotnetapp.Interfaces;
+using dotnetapp.Interface;
 using dotnetapp.Models;
 using dotnetapp.Services;
 using Microsoft.AspNetCore.Diagnostics;
