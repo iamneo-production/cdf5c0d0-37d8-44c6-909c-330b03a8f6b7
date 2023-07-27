@@ -92,12 +92,15 @@ h2 {
   padding: 10px;
   border: 1px solid #cbcaca;
   border-radius: 4px;
+  
+}
+.loan-details1{
   background-color: #9c9b9b;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
-.search-bar {
+.search-bar1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -119,7 +122,7 @@ h2 {
   font-weight: bold;
 
 }
-.column {
+.column2 {
   margin-bottom: 10px;
   
 }
@@ -279,4 +282,3 @@ input[type="text"] {
 .profile-container div {
   margin-bottom: 10px;
 }
-
