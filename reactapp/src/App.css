@@ -1,5 +1,118 @@
 .App {
   text-align: center;
+<<<<<<< HEAD
+=======
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button.approve-button {
+  background-color: #174318;
+  color: #f5f3f3;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button.repayment-button{
+  background-color: #9967f0;
+  color: #f5f3f3;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+button.search-button {
+  background-color: #0d0808;
+  color: #f9e4e4;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+  
+}
+h2 {
+  margin-bottom: 10px;
+}
+
+
+.approved-loan-container {
+  margin: 20px;
+  
+}
+.loan-details{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #cbcaca;
+  border-radius: 4px;
+  
+}
+.loan-details1{
+  background-color: #9c9b9b;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+.search-bar1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+#Search {
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.found1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+  font-size: 24px;
+  font-weight: bold;
+
+}
+.column2 {
+  margin-bottom: 10px;
+  
+}
+h3 {
+  margin-bottom: 10px;
+  
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+>>>>>>> 4811a4dffb0a62f683044c9a47bcb66781322250
 }
 
 .App-logo {
@@ -28,6 +141,7 @@
   color: #61dafb;
 }
 
+<<<<<<< HEAD
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +150,8 @@
     transform: rotate(360deg);
   }
 }
+=======
+.profile-container div {
+  margin-bottom: 10px;
+}
+>>>>>>> 4811a4dffb0a62f683044c9a47bcb66781322250
