@@ -17,24 +17,24 @@ const Dashboard = () => {
         <nav>
           <ul>
             <li>
-              <Link to="/user/applyLoan">Apply Loan</Link>
+              <Link to="user/applyLoan">Apply Loan</Link>
             </li>
             <li>
-              <Link to="/user/viewLoan">Loan Status</Link>
+              <Link to="user/viewLoan">Loan Status</Link>
             </li>
             <li>
-              <Link to="/user/getProfile">Profile</Link>
+              <Link to="user/getProfile">Profile</Link>
             </li>
           </ul>
         </nav>
         <button className="logout-button" onClick={handleLogout}>Logout</button>
       </header>
       <Routes>
-        <Route exact path="/user/getProfile" element={<Customerprofile />} />
-        <Route exact path="/user/viewLoan" element={<Appliedstatus />} />
-        <Route path="/user/applyLoan" element={<ApplyLoan />} />
-        <Route path="/user/getDocument" element={<GetDocument />} />
-        <Route path="/user/loanApplied" element={<LoanApplied />} />
+        <Route exact path="user/getProfile" element={<Customerprofile />} />
+        <Route exact path="user/viewLoan" element={<Appliedstatus />} />
+        <Route path="user/applyLoan" element={<ApplyLoan />} />
+        <Route path="user/getDocument" element={<GetDocument />} />
+        <Route path="user/loanApplied" element={<LoanApplied />} />
       </Routes>
     </>
   );

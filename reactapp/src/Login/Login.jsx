@@ -23,7 +23,7 @@ function Login() {
     setError(LoginAuth(values));
     if (errors.email === '' && errors.password === '') {
       axios
-        .post('https://8081-babebfdaaddaacebcaffeabdcdceeeeaf.project.examly.io/', values)
+        .post('https://8081-babebfdaaddaacebcaffeabdcdceeeeaf.project.examly.io/login', values)
         .then((res) => {
           if (res.data.Status === 'Success') {
             const data = {
@@ -31,7 +31,7 @@ function Login() {
               password: values.password,
             };
             axios
-              .get('http://localhost:5120/user/getUserdetails', { params: data })
+              .get('https://8080-babebfdaaddaacebcaffeabdcdceeeeaf.project.examly.io/user/getUserdetails', { params: data })
               .then((response) => {
                 const userRole = response.data.userRole;
                 if (userRole === 'user') {
@@ -48,7 +48,7 @@ function Login() {
                 alert('Failed to fetch user role');
               });
           } else {
-            navigate('/Signup');
+            navigate('/');
             alert('Invalid Credentials Please Register');
           }
         })
@@ -63,12 +63,12 @@ function Login() {
   };
 
   axios
-    .post('http://localhost:5120/user/login', data)
+    .post('https://8080-babebfdaaddaacebcaffeabdcdceeeeaf.project.examly.io/user/login', data)
     .then((res) => {
       debugger;
-      if (res.data === 'user is valid') {
+      if (res.data === 'User is valid.') {
         axios
-          .get('http://localhost:5120/user/getUserdetails', { params: data })
+          .get('https://8080-babebfdaaddaacebcaffeabdcdceeeeaf.project.examly.io/user/getUserdetails', { params: data })
           .then((response) => {
             const userRole = response.data.userRole;
             if (userRole === 'user') {
@@ -84,7 +84,7 @@ function Login() {
             alert('Failed to fetch user role');
           });
       } else {
-        navigate('/signup');
+        navigate('/');
         alert('Invalid Credentials Please Register');
       }
     })
@@ -92,8 +92,6 @@ function Login() {
       alert(error);
     });
 };
-
-
   return (
     <>
       <div className='d-flex justify-content-center align-items-center p-4 w-100 loginHead'>
