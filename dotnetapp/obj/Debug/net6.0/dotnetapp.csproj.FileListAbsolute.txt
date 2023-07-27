@@ -70,3 +70,6 @@
 /home/coder/project/workspace/dotnetapp/obj/Debug/net6.0/staticwebassets.build.json
 /home/coder/project/workspace/dotnetapp/obj/Debug/net6.0/staticwebassets.development.json
 /home/coder/project/workspace/dotnetapp/obj/Debug/net6.0/scopedcss/bundle/dotnetapp.styles.css
+/home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/Microsoft.Extensions.Configuration.dll
+/home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/Microsoft.Extensions.Primitives.dll
