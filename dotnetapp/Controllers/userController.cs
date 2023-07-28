@@ -27,16 +27,16 @@ namespace dotnetapp.Controllers
         }
         [HttpPost]
         [Route("Signup")]
-        public string Signup(BikeLoan bikeloan)
+        public IActionResult Signup(BikeLoan bikeloan)
         {
             try
             {
-                var result = _iuser.Signup(bikeloan);
-                return result;
+            var result = _iuser.Signup(bikeloan);
+            return CreatedAtAction(nameof(Signup), result);
             }
             catch (Exception ex)
             {
-                return ex.Message;
+            return BadRequest(ex.Message);
             }
         }
         [HttpPost]
