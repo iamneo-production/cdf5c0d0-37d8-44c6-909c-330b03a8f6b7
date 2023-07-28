@@ -31,7 +31,7 @@ function Login() {
               password: values.password,
             };
             axios
-              .get('http://localhost:5120/user/getUserdetails', { params: data })
+              .get('https://8080-babebfdaaddaacebcaffeabdcdceeeeaf.project.examly.io/user/getUserdetails', { params: data })
               .then((response) => {
                 const userRole = response.data.userRole;
                 if (userRole === 'user') {
@@ -144,7 +144,7 @@ function Login() {
               </div>
               <div className='col-4'>
                 <Link
-                  to='/signup'
+                  to='/'
                   id='signupLink'
                   className='text-blue-ms-'
                   style={{ textDecoration: 'none' }}
