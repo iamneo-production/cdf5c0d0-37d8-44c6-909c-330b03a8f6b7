@@ -144,7 +144,7 @@ function Login() {
               </div>
               <div className='col-4'>
                 <Link
-                  to='/signup'
+                  to='/'
                   id='signupLink'
                   className='text-blue-ms-'
                   style={{ textDecoration: 'none' }}

@@ -25,22 +25,23 @@ namespace dotnetapp.Controllers
         {
             _iuser = iuser;
         }
+       [HttpPost]
+      [Route("signup")]
+    public IActionResult Signup(BikeLoan bikeloan)
+   {
+    try
+       {
+        var result = _iuser.Signup(bikeloan);
+        return CreatedAtAction(nameof(Signup), result);
+       }
+    catch (Exception ex)
+    {
+        return BadRequest(ex.Message);
+    }
+   }
+
         [HttpPost]
-        [Route("Signup")]
-        public string Signup(BikeLoan bikeloan)
-        {
-            try
-            {
-                var result = _iuser.Signup(bikeloan);
-                return result;
-            }
-            catch (Exception ex)
-            {
-                return ex.Message;
-            }
-        }
-        [HttpPost]
-        [Route("Login")]
+        [Route("login")]
         public string Login(login login)
         {
             try
@@ -86,35 +87,7 @@ namespace dotnetapp.Controllers
                 return ex.Message;
             }
         }
-        [HttpGet]
-        [Route("getProfile")]
-        public IActionResult GetAllLoanDetails()
-        {
-            try
-            {
-                var loandetails = _iuser.getProfile();
-                return Ok(loandetails);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-        [HttpGet]
-        [Route("getUserdetails")]
-        public IActionResult getUserdetails(string email , string password )
-        {
-            try
-            {
-                var result = _iuser.getUserdetails(email, password);
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-        [HttpGet]
+         [HttpGet]
         [Route("getDocuments")]
         public IActionResult getDocuments()
         {
@@ -129,7 +102,6 @@ namespace dotnetapp.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
         [HttpGet]
         [Route("viewLoan")]
         public IActionResult viewLoan()
@@ -139,6 +111,20 @@ namespace dotnetapp.Controllers
                 List<Models.Loandetails> documentdetails = _iuser.viewLoan();
                 return Ok(documentdetails);
 
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("getProfile")]
+        public IActionResult GetAllLoanDetails()
+        {
+            try
+            {
+                var loandetails = _iuser.getProfile();
+                return Ok(loandetails);
             }
             catch (Exception ex)
             {

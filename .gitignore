@@ -1,3 +1,7 @@
 node_modules/
 done
 react/
+nunit/
+bin/
+obj/
+Properties/
